@@ -1,0 +1,210 @@
+/* --- Main styling --- */
+h1, h2, h3, h4, h5, h6 {
+  color: #29abe2;
+}
+
+body {
+  background-color: #29abe2;
+  margin: 0;
+  font-family: AppleSymbols;
+  font-size: 18pt;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  padding: 0 10%;
+  background-color: white;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  font-size: 32pt;
+}
+
+header .menu ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+}
+
+header .menu ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+header .menu ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #29abe2;
+  text-align: center;
+  height: 75px;
+  padding: 0 16px;
+  text-decoration: none;
+}
+
+header .menu ul li a:hover:not(.active) {
+  background-color: #29abe2;
+  color: white;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+/* --- index styling --- */
+.half-block {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 400px;
+}
+
+.half-block .banner.image {
+  background-image: url("../images/illustratie1.png");
+  background-repeat: no-repeat;
+  background-size: auto 250px;
+  background-position: center;
+  background-color: white;
+  height: 100%;
+}
+
+.half-block .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20%;
+}
+
+.half-block .banner.text .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  color: #29abe2;
+}
+
+.half-block .banner.text .content h1 {
+  font-size: 48pt;
+}
+
+.half-block .info.image {
+  background-image: url("../images/illustratie2.png");
+  background-repeat: no-repeat;
+  background-size: auto 150px;
+  background-position: center;
+  background-color: white;
+  height: 100%;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: center;
+  align-items: center;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  padding: 10%;
+  background: white;
+}
+
+.projects .project {
+  height: 500px;
+}
+
+.projects .project.image {
+  height: 350px;
+  border-radius: 16px 16px 0px 0px;
+  background-size: auto 100%;
+  background-position: center;
+  border: 4px solid #29abe2;
+  border-bottom: none;
+}
+
+.projects .project .project.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  border: 4px solid #29abe2;
+  border-top: none;
+  border-radius: 0px 0px 16px 16px;
+  text-align: center;
+}
+
+.projects #project1 .image {
+  background-image: url("../images/dev.jpeg");
+}
+
+.projects #project2 .image {
+  background-image: url("../images/uex.jpeg");
+}
+
+.projects #project3 .image {
+  background-image: url("../images/sco.jpeg");
+}
+
+.projects #project4 .image {
+  background-image: url("../images/ptm.jpeg");
+}
+
+/* --- projecten styling --- */
+.view {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.sidemenu {
+  grid-column: 1;
+  grid row: 1 / auto;
+  background-color: #29abe2;
+  height: 1000px;
+}
+
+.sidemenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 20px 0 0 0;
+  border-bottom: 3px solid white;
+  color: white;
+}
+
+.sidemenu ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  height: 40px;
+  text-decoration: none;
+}
+
+.sidemenu ul li a:hover:not(.active) {
+  background-color: white;
+  color: #29abe2;
+}
+
+.content {
+  padding: 20px;
+  background-color: white;
+  font-size: 14pt;
+}
