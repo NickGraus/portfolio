@@ -62,6 +62,22 @@ header .menu ul li a:hover:not(.active) {
 }
 
 /* --- index styling --- */
+.banner {
+  background-image: url("../images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-color: white;
+  height: 500px;
+}
+
+.banner .inner-block {
+  height: 200px;
+  width: 300px;
+  background-color: #29abe2;
+  background-opaci
+}
+
 .half-block {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -69,15 +85,6 @@ header .menu ul li a:hover:not(.active) {
   align-items: center;
   background-color: white;
   height: 400px;
-}
-
-.half-block .banner.image {
-  background-image: url("../images/illustratie1.png");
-  background-repeat: no-repeat;
-  background-size: auto 250px;
-  background-position: center;
-  background-color: white;
-  height: 100%;
 }
 
 .half-block .text {
@@ -99,7 +106,16 @@ header .menu ul li a:hover:not(.active) {
   font-size: 48pt;
 }
 
-.half-block .info.image {
+.half-block.one .info.image {
+  background-image: url("../images/illustratie1.png");
+  background-repeat: no-repeat;
+  background-size: auto 150px;
+  background-position: center;
+  background-color: white;
+  height: 100%;
+}
+
+.half-block.two .info.image {
   background-image: url("../images/illustratie2.png");
   background-repeat: no-repeat;
   background-size: auto 150px;
