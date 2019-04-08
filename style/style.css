@@ -63,6 +63,9 @@ header .menu ul li a:hover:not(.active) {
 
 /* --- index styling --- */
 .banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url("../images/banner.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -72,10 +75,18 @@ header .menu ul li a:hover:not(.active) {
 }
 
 .banner .inner-block {
-  height: 200px;
-  width: 300px;
-  background-color: #29abe2;
-  background-opaci
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 60%;
+  width: 75%;
+  background-color: rgb(41, 171, 226, 0.75);
+  text-align: center;
+  color: white;
+}
+
+.banner .inner-block h1 {
+  color: white;
 }
 
 .half-block {
