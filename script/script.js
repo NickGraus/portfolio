@@ -1,5 +1,6 @@
 var xhr;
 
+
 function setXhr() {
   if (window.XMLHttpRequest) {
     xhr = new XMLHttpRequest();
@@ -10,12 +11,12 @@ function setXhr() {
   }
 }
 
-function getData() {
+function getData(idName) {
   setXhr();
 
   xhr.onreadystatechange = function() {
     if (xhr.readyState < 4)
-      document.getElementById('content').innerHTML = "Loading...";
+      document.getElementsByClassName("idName").innerHTML = "Loading...";
     else if (xhr.readyState === 4) {
       if (xhr.status == 200 && xhr.status < 300) {
         var data = JSON.parse(this.responseText);
@@ -23,13 +24,14 @@ function getData() {
         var output = '';
 
         for (var i in data) {
-          output += '<ul>' +
-            '<li>' + data[i].vak + '</li>' +
-            '<li>' + data[i].doelstellingen.title + '</li>' +
-            '</ul>';
+          output += '<h2>' + data[i].vak + '</h2>';
+          for (var n in data[i].doelstellingen) {
+            output += '<h3>' + data[i].doelstellingen[n].title + '</h3>' +
+              '<p>' + data[i].doelstellingen[n].content + '</p>'
+          }
         }
 
-        document.getElementById('content').innerHTML = output;
+        document.getElementById(idName).innerHTML = output;
       }
     }
   }
@@ -37,5 +39,25 @@ function getData() {
   xhr.send(null);
 }
 
+function getMenuItem() {
+  var clickedItem = document.getElementById("menuItem").onclick();
+  if (clickedItem == "home") {
+    console.log("home");
+  } else if (clickedItem == "sco") {
+    console.log("sco")
+  } else if (clickedItem == "uex") {
+    console.log("sco")
+  } else if (clickedItem == "ptm") {
+    console.log("sco")
+  } else if (clickedItem == "dev") {
+    console.log("dev")
+  }
+}
 
-document.onload = getData();
+function loadFunctions() {
+  getData('content');
+  getMenuItem();
+}
+
+
+document.onload = loadFunctions();
