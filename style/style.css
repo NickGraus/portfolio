@@ -235,3 +235,7 @@ header #menu li a:hover:not(.active) {
   background-color: white;
   font-size: 14pt;
 }
+
+.text {
+  width: 50%;
+}
