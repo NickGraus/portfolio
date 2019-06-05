@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript">
+    function showTime() {
+      let today = new Date();
+      let hours = today.getHours();
+      let minutes = today.getMinutes();
+      let seconds = today.getSeconds();
+      minutes = checkTime(minutes);
+      seconds = checkTime(seconds);
+      document.getElementById('outputTime').innerHTML = hours + ":" + minutes + ":" + seconds;
+      setInterval('showTime()', 100);
+    }
+
+    // Plaatst een nul voor de enkele cijfers
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+
+    function loadFunctions() {
+      showTime();
+    }
+
+    window.onload = loadFunctions;
+  </script>
+</head>
+
+<body>
+  <div id="outputTime"></div>
+  <div id="outputCounter"></div>
+</body>
+
+</html>

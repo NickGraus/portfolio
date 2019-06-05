@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h2>For-loop</h2>
+  <p id="output"></p>
+
+  <script>
+    var cars = ["Buick", "Volvo", "Saab", "Ford", "Ferrari", "Porsche"];
+
+    var i = 0;
+    var length = cars.length;
+    var text = "";
+
+    for (; i < length;) {
+      text += cars[i] + "<br>";
+      i++;
+    }
+    document.getElementById("output").innerHTML = text;
+  </script>
+
+</body>
+
+</html>

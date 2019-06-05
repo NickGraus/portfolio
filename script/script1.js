@@ -44,7 +44,7 @@ function getMenuItem() {
 
 function getData(file) {
   setXhr();
-  var fileName = file;
+  fileName = file;
   xhr.onreadystatechange = function() {
     if (xhr.readyState < 4)
       document.getElementsByClassName("content").innerHTML = "Loading...";
@@ -54,7 +54,7 @@ function getData(file) {
       }
     }
   }
-  xhr.open('GET', 'content/' + fileName, true);
+  xhr.open('GET', '../content/' + fileName, true);
   xhr.send(null);
 }
 

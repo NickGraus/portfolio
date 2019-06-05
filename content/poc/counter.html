@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript">
+    function counter() {
+      var i = 0;
+      function add() {
+        if (i == 100) clearInterval(this);
+        else document.getElementById('outputTime').innerHTML = i++;
+      };
+      // This block will be executed 100 times.
+      setInterval(add, 1000);
+      add();
+    } // End
+
+    function loadFunctions() {
+      counter();
+    }
+
+    window.onload = loadFunctions;
+  </script>
+</head>
+
+<body>
+  <div id="outputTime"></div>
+  <div id="outputCounter"></div>
+</body>
+
+</html>
