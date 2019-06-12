@@ -77,12 +77,21 @@ header #menu li a:hover:not(.active) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../images/banner.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
   background-color: white;
   height: 500px;
+  margin-bottom: 100px;
+}
+
+.banner.index {
+  background-image: url("../images/banner.jpg");
+}
+
+.banner.overmij {
+  background-image: url("../images/overmij.jpg");
+  background-position-y: top;
 }
 
 .banner .inner-block {
@@ -90,7 +99,7 @@ header #menu li a:hover:not(.active) {
   align-content: center;
   justify-content: center;
   height: 60%;
-  width: 75%;
+  width: 50%;
   background-color: rgb(41, 171, 226, 0.75);
   text-align: center;
   color: white;
@@ -107,14 +116,14 @@ header #menu li a:hover:not(.active) {
   align-items: center;
   background-color: white;
   height: 400px;
-  padding: 0 5%;
+  padding: 0 25%;
+  padding-bottom: 25px;
 }
 
 .half-block .text {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20%;
 }
 
 .half-block .banner.text #content {
@@ -136,6 +145,11 @@ header #menu li a:hover:not(.active) {
   background-position: center;
   background-color: white;
   height: 100%;
+}
+
+.half-block.one .info.image.overmij {
+  background-image: url("../images/ik.jpg");
+  background-size: 100%;
 }
 
 .half-block.two .info.image {
