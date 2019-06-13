@@ -25,16 +25,12 @@ function getMenuItem() {
 
   if (clickedMenuItem === "sco") {
     fileName = "sco.html";
-    console.log(fileName);
   } else if (clickedMenuItem === "dev") {
     fileName = "dev.html";
-    console.log(fileName);
   } else if (clickedMenuItem === "uex") {
     fileName = "uex.html";
-    console.log(fileName);
   } else if (clickedMenuItem === "ptm") {
     fileName = "ptm.html";
-    console.log(fileName);
   } else {
      fileName = "index.html";
    }
