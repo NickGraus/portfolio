@@ -1,5 +1,7 @@
 var xhr;
-
+var menuItem = document.getElementsByClassName("menuItem");
+var clickedMenuItem;
+var fileName;
 
 function setXhr() {
   if (window.XMLHttpRequest) {
@@ -11,51 +13,48 @@ function setXhr() {
   }
 }
 
-function getData(idName) {
-  setXhr();
+function getMenuItem() {
 
+  for (i = 0; i < menuItem.length; i++) {
+    menuItem[i].onclick = function(e) {
+      clickedMenuItem = this.id;
+    }
+
+    menuItem[i].addEventListener('click', getMenuItem);
+  }
+
+  if (clickedMenuItem === "sco") {
+    fileName = "sco.html";
+  } else if (clickedMenuItem === "dev") {
+    fileName = "dev.html";
+  } else if (clickedMenuItem === "uex") {
+    fileName = "uex.html";
+  } else if (clickedMenuItem === "ptm") {
+    fileName = "ptm.html";
+  } else {
+     fileName = "index.html";
+   }
+
+  getData(fileName)
+}
+
+function getData(file) {
+  setXhr();
+  fileName = file;
   xhr.onreadystatechange = function() {
     if (xhr.readyState < 4)
-      document.getElementsByClassName("idName").innerHTML = "Loading...";
+      document.getElementsByClassName("content").innerHTML = "Loading...";
     else if (xhr.readyState === 4) {
       if (xhr.status == 200 && xhr.status < 300) {
-        var data = JSON.parse(this.responseText);
-
-        var output = '';
-
-        for (var i in data) {
-          output += '<h2>' + data[i].vak + '</h2>';
-          for (var n in data[i].doelstellingen) {
-            output += '<h3>' + data[i].doelstellingen[n].title + '</h3>' +
-              '<p>' + data[i].doelstellingen[n].content + '</p>'
-          }
-        }
-
-        document.getElementById(idName).innerHTML = output;
+        document.getElementById("content").innerHTML = xhr.responseText;
       }
     }
   }
-  xhr.open('GET', 'content/pagecontent.json', true);
+  xhr.open('GET', '../content/' + fileName, true);
   xhr.send(null);
 }
 
-function getMenuItem() {
-  var clickedItem = document.getElementById("menuItem").onclick();
-  if (clickedItem == "home") {
-    console.log("home");
-  } else if (clickedItem == "sco") {
-    console.log("sco")
-  } else if (clickedItem == "uex") {
-    console.log("sco")
-  } else if (clickedItem == "ptm") {
-    console.log("sco")
-  } else if (clickedItem == "dev") {
-    console.log("dev")
-  }
-}
-
 function loadFunctions() {
-  getData('content');
   getMenuItem();
 }
 
