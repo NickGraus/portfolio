@@ -2,7 +2,7 @@
 ## Semester 2 Portfolio website ##
 
 #### Description ####
-In this repository I kepted record of mij portfolio website of semester 2. All files required for the site can be found in this repo. While the html files are in main folder, the styling files an script files can be found inside sub-folders.
+In this repository I kepted record of my portfolio website of semester 2. All files required for the site can be found in this repo. While the html files are in main folder, the styling files an script files can be found inside sub-folders.
 
 ### Requirements ###
 To run this website you need to have access to a browser. To make sure the site loads properly local, I would advise to use a live-server plugin on your IDE. I used Atom editor with live-server as my IDE.
